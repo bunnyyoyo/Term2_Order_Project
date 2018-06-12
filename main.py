@@ -148,6 +148,7 @@ def pending_orders_menu():
         except ValueError:
             print("Invalid Option, Please Try Again.")
 
+
 def complete_order_menu():
     print("---------------------------")
     print("All complete orders: ")
