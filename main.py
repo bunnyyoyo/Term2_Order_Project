@@ -117,6 +117,11 @@ def pending_orders_menu():
     for i, filename in enumerate(files):
         order_id = filename[21:-4]
         print("{}. {}". format(i+1, order_id))
+
+    if len(files) == 0:
+        print("No pending orders")
+        return
+
     print("Please pick one to view detail or complete")
 
     index = -1
@@ -157,6 +162,10 @@ def complete_order_menu():
         order_id = filename[22:-4]
         print("{}. {}". format(i+1, order_id))
     print("Please pick one to view detail")
+
+    if len(files) == 0:
+        print("No complete orders")
+        return
 
     index = -1
     while index == -1:
